@@ -1,22 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: danielda <danielda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/14 21:45:59 by danielda          #+#    #+#             */
-/*   Updated: 2024/10/25 20:28:33 by danielda         ###   ########.fr       */
+/*   Created: 2024/10/25 22:06:04 by danielda          #+#    #+#             */
+/*   Updated: 2024/10/25 22:09:03 by danielda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
-#include <stdio.h>
+#include <string.h>
 
-int	ft_toupper(int c)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	if (c >= 'a' && c <= 'z')
-		return (c - 32);
-	else
-		return (c);
 }

@@ -1,22 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: danielda <danielda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/14 21:45:59 by danielda          #+#    #+#             */
-/*   Updated: 2024/10/25 20:28:33 by danielda         ###   ########.fr       */
+/*   Created: 2024/10/25 19:37:54 by danielda          #+#    #+#             */
+/*   Updated: 2024/10/25 21:52:58 by danielda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
-#include <stdio.h>
+#include <string.h>
 
-int	ft_toupper(int c)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	if (c >= 'a' && c <= 'z')
-		return (c - 32);
-	else
-		return (c);
+	const unsigned char	*ptr;
+	unsigned char		ch;
+
+	ptr = (const unsigned char *)s;
+	ch = (unsigned char)c;
+	while (n--)
+	{
+		if (*ptr == ch)
+			return ((void *)(ptr));
+		ptr++;
+	}
+	return (NULL);
 }

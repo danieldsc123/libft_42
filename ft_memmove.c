@@ -1,22 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: danielda <danielda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/14 21:45:59 by danielda          #+#    #+#             */
-/*   Updated: 2024/10/25 20:28:33 by danielda         ###   ########.fr       */
+/*   Created: 2024/10/24 18:44:30 by danielda          #+#    #+#             */
+/*   Updated: 2024/10/25 20:10:16 by danielda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
-#include <stdio.h>
+#include <string.h>
+#include "libft.h"
 
-int	ft_toupper(int c)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	if (c >= 'a' && c <= 'z')
-		return (c - 32);
+	unsigned char		*d;
+	const unsigned char	*s;
+
+	d = (unsigned char *)dest;
+	s = (const unsigned char *)src;
+	if (dest == src || n == 0)
+		return (dest);
+	if (d < s)
+		while (n --)
+			*d++ = *s++;
 	else
-		return (c);
+	{
+		d += n;
+		s += n;
+		while (n--)
+			*(--d) = *(--s);
+	}
+	return (dest);
 }
