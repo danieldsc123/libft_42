@@ -1,31 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: danielda <danielda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/25 22:06:04 by danielda          #+#    #+#             */
-/*   Updated: 2024/10/29 19:43:34 by danielda         ###   ########.fr       */
+/*   Created: 2024/10/28 17:24:55 by danielda          #+#    #+#             */
+/*   Updated: 2024/10/29 19:34:41 by danielda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include <unistd.h>
 
-int	ft_memcmp(const void *s1, const void *s2, size_t n)
+void	ft_putchar_fd(char c, int fd)
 {
-	size_t				i;
-	const unsigned char	*ptr1;
-	const unsigned char	*ptr2;
-
-	i = 0;
-	ptr1 = (const unsigned char *)s1;
-	ptr2 = (const unsigned char *)s2;
-	while (i < n)
-	{
-		if (ptr1[i] != ptr2[i])
-			return (ptr1[i] - ptr2[i]);
-		i++;
-	}
-	return (0);
+	write(fd, &c, 1);
 }

@@ -6,7 +6,7 @@
 /*   By: danielda <danielda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 20:49:07 by danielda          #+#    #+#             */
-/*   Updated: 2024/10/15 10:35:55 by danielda         ###   ########.fr       */
+/*   Updated: 2024/10/30 18:40:20 by danielda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_isascii(char c)
 {
-	if (c >= 0 && c <= 127)
+	if ((unsigned char)c <= 127)
 		return (1);
 	else
 		return (0);

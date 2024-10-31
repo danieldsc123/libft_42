@@ -6,7 +6,7 @@
 /*   By: danielda <danielda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/19 16:06:49 by danielda          #+#    #+#             */
-/*   Updated: 2024/10/21 13:46:09 by danielda         ###   ########.fr       */
+/*   Updated: 2024/10/31 15:15:07 by danielda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	size_t	j;
 
 	i = 0;
-	if (!little)
+	if (!little || little[0] == '\0')
 		return ((char *)big);
 	while (big[i] && i < len)
 	{

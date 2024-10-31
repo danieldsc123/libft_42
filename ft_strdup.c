@@ -1,31 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: danielda <danielda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/25 22:06:04 by danielda          #+#    #+#             */
-/*   Updated: 2024/10/29 19:43:34 by danielda         ###   ########.fr       */
+/*   Created: 2024/10/27 20:37:30 by danielda          #+#    #+#             */
+/*   Updated: 2024/10/28 15:12:35 by danielda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
+#include <stdlib.h>
 
-int	ft_memcmp(const void *s1, const void *s2, size_t n)
+char	*ft_strdup(const char *s)
 {
-	size_t				i;
-	const unsigned char	*ptr1;
-	const unsigned char	*ptr2;
+	char		*copy;
+	int			i;
+	int			dest;
 
 	i = 0;
-	ptr1 = (const unsigned char *)s1;
-	ptr2 = (const unsigned char *)s2;
-	while (i < n)
+	dest = 0;
+	while (s[dest] != '\0')
 	{
-		if (ptr1[i] != ptr2[i])
-			return (ptr1[i] - ptr2[i]);
+		dest++;
+	}
+	copy = (char *)malloc((dest + 1) * sizeof(char));
+	if (!copy)
+	{
+		return (NULL);
+	}
+	while (i < dest)
+	{
+		copy[i] = s[i];
 		i++;
 	}
-	return (0);
+	copy[i] = '\0';
+	return (copy);
 }

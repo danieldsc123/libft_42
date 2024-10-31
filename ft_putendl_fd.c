@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: danielda <danielda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/25 22:06:04 by danielda          #+#    #+#             */
-/*   Updated: 2024/10/29 19:43:34 by danielda         ###   ########.fr       */
+/*   Created: 2024/10/28 18:31:33 by danielda          #+#    #+#             */
+/*   Updated: 2024/10/29 19:59:31 by danielda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include <unistd.h>
+#include "libft.h"
 
-int	ft_memcmp(const void *s1, const void *s2, size_t n)
+void	ft_putendl_fd(char *s, int fd)
 {
-	size_t				i;
-	const unsigned char	*ptr1;
-	const unsigned char	*ptr2;
-
-	i = 0;
-	ptr1 = (const unsigned char *)s1;
-	ptr2 = (const unsigned char *)s2;
-	while (i < n)
+	if (!s)
+		return ;
+	while (*s)
 	{
-		if (ptr1[i] != ptr2[i])
-			return (ptr1[i] - ptr2[i]);
-		i++;
+		write (fd, s, 1);
+		s++;
 	}
-	return (0);
+	write (fd, "\n", 1);
 }

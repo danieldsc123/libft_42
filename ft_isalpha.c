@@ -6,17 +6,16 @@
 /*   By: danielda <danielda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 12:31:44 by danielda          #+#    #+#             */
-/*   Updated: 2024/10/18 12:25:09 by danielda         ###   ########.fr       */
+/*   Updated: 2024/10/31 14:13:57 by danielda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include <ctype.h>
+#include "libft.h"
 
 int	ft_isalpha(char c)
 {
 	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
 		return (1);
-	else
-		return (0);
+	return (0);
 }
