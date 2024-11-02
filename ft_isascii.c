@@ -6,15 +6,15 @@
 /*   By: danielda <danielda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 20:49:07 by danielda          #+#    #+#             */
-/*   Updated: 2024/10/30 18:40:20 by danielda         ###   ########.fr       */
+/*   Updated: 2024/10/31 18:26:23 by danielda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <ctype.h>
 
-int	ft_isascii(char c)
+int	ft_isascii(int c)
 {
-	if ((unsigned char)c <= 127)
+	if (c >= 0 && c <= 127)
 		return (1);
 	else
 		return (0);
