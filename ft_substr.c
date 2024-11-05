@@ -6,12 +6,19 @@
 /*   By: danielda <danielda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/19 18:19:21 by danielda          #+#    #+#             */
-/*   Updated: 2024/10/21 19:31:54 by danielda         ###   ########.fr       */
+/*   Updated: 2024/11/04 20:25:23 by danielda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 #include <stdlib.h>
+
+size_t	check_len(size_t len, size_t strlen, unsigned int start)
+{
+	if (len > strlen - start)
+		len = strlen - start;
+	return (len);
+}
 
 char	*ft_substr(const char *s, unsigned int start, size_t len)
 {
@@ -21,14 +28,15 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 
 	if (!s)
 		return (NULL);
-	s_len = strlen(s);
+	s_len = ft_strlen(s);
 	if (start >= s_len)
-		return (strdup(""));
+		return (ft_strdup(""));
+	len = check_len(len, ft_strlen(s), start);
 	substr = (char *)malloc((len + 1) * sizeof(char));
 	if (!substr)
 		return (NULL);
 	i = 0;
-	while (i < len && s[start + 1])
+	while (i < len && s[start + i])
 	{
 		substr[i] = s[start + i];
 		i++;

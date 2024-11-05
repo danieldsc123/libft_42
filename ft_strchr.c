@@ -6,7 +6,7 @@
 /*   By: danielda <danielda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 12:00:58 by danielda          #+#    #+#             */
-/*   Updated: 2024/10/18 14:00:06 by danielda         ###   ########.fr       */
+/*   Updated: 2024/11/04 18:12:41 by danielda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	while ((*s != '\0') && (*s != c))
+	while ((*s != '\0') && (*s != (char)c))
 	{
 		s++;
 	}
-	if (*s == c)
+	if (*s == (char)c)
 	{
 		return ((char *)s);
 	}

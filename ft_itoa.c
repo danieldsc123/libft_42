@@ -6,7 +6,7 @@
 /*   By: danielda <danielda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 15:47:10 by danielda          #+#    #+#             */
-/*   Updated: 2024/10/29 20:55:54 by danielda         ###   ########.fr       */
+/*   Updated: 2024/11/04 13:53:10 by danielda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ static int	ft_numlen(int n)
 	len = 1;
 	while (n / 10 != 0)
 	{
-		len++;
 		n /= 10;
+		len++;
 	}
 	return (len);
 }

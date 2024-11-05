@@ -6,12 +6,9 @@
 /*   By: danielda <danielda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 21:45:59 by danielda          #+#    #+#             */
-/*   Updated: 2024/10/25 20:28:33 by danielda         ###   ########.fr       */
+/*   Updated: 2024/11/04 20:42:43 by danielda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <ctype.h>
-#include <stdio.h>
 
 int	ft_toupper(int c)
 {
