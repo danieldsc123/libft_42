@@ -3,44 +3,26 @@
 /*                                                        :::      ::::::::   */
 /*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: danielda <danielda@student.42.fr>          +#+  +:+       +#+        */
+/*   By: danda-si <danda-si@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 22:40:52 by danielda          #+#    #+#             */
-/*   Updated: 2024/10/23 18:40:30 by danielda         ###   ########.fr       */
+/*   Updated: 2026/05/14 14:37:50 by danda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/*
-void	ft_adrielda(unsigned int i, char *c)
-{
-	while(*c)
-	{
-		printf("%d", i);	
-		printf("%s\n", c);
-		c++;
-	}
-}
-*/
-void	ft_striteri(char *s, void (*f)(unsigned int, char*))
+
+void	*ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	unsigned int	i;
 
-	if (!s)
-		return ;
+	if (!s || !f)
+		return (NULL);
 	i = 0;
 	while (s[i])
 	{
 		f(i, &s[i]);
-		++i;
+		i++;
 	}
+	return (s);
 }
-/*
-int main()
-{
-	char srt[] = "daniel";
-	ft_striteri(srt,ft_adrielda(2, srt));
-	printf("%s\n", srt);
-	return 0;
-}
-*/

@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: danielda <danielda@student.42.fr>          +#+  +:+       +#+        */
+/*   By: danda-si <danda-si@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 20:15:34 by danielda          #+#    #+#             */
-/*   Updated: 2024/10/23 20:43:05 by danielda         ###   ########.fr       */
+/*   Updated: 2026/05/14 14:40:52 by danda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <strings.h>
-#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {

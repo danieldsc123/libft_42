@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: danielda <danielda@student.42.fr>          +#+  +:+       +#+        */
+/*   By: danda-si <danda-si@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/19 18:19:21 by danielda          #+#    #+#             */
-/*   Updated: 2024/11/04 20:25:23 by danielda         ###   ########.fr       */
+/*   Updated: 2026/05/14 14:40:20 by danda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 #include <stdlib.h>
+#include "libft.h"
 
 size_t	check_len(size_t len, size_t strlen, unsigned int start)
 {

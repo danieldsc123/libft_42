@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: danielda <danielda@student.42.fr>          +#+  +:+       +#+        */
+/*   By: danda-si <danda-si@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 22:07:48 by danielda          #+#    #+#             */
-/*   Updated: 2024/10/22 01:35:26 by danielda         ###   ########.fr       */
+/*   Updated: 2026/05/14 14:43:33 by danda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	str = ft_substr(s1, i, len);
 	return (str);
 }
-/*
-int	main()
-{
-	printf("%s", ft_strtrim("teste", "t"));
-}
-*/
